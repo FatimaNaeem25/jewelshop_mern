@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-gray-50; 
+  }
+  /* Add your existing styles here */
+
+/* Circle Bullet Styles */
+.circle-bullets {
+  list-style-type: none; /* Remove default bullets */
+  padding: 0; /* Remove default padding */
+}
+
+.circle-bullets li {
+  position: relative;
+  padding-left: 25px; /* Add space for the circle */
+  margin-bottom: 10px; /* Space between items */
+}
+
+.circle-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0; /* Align the circle to the left */
+  top: 50%;
+  transform: translateY(-50%); /* Center the circle vertically */
+  width: 8px; /* Circle size */
+  height: 8px; /* Circle size */
+  background-color: white; /* Circle color */
+  border-radius: 50%; /* Make it circular */
+}
+
+/* Other styles... */
